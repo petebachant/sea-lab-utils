@@ -3,10 +3,10 @@ Utilities for plotting and other routine tasks used across the lab
 
 ## Python
 
-Install the Python utilities with
+Add the Python utilities to a uv project with
 
 ```sh
-pip install "sealab @ git+https://github.com/symbiotic-engineering/sea-lab-utils"
+uv add "sealab @ git+https://github.com/symbiotic-engineering/sea-lab-utils"
 ```
 
 then import them like
