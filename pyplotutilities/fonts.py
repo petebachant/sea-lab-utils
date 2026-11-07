@@ -15,10 +15,11 @@ def get_fonts(usetex=True):
     else:
         plt.rcParams.update(
             {
-                "font.family": "serif",
-                "font.serif": ["cmr10"],
+                # cmr10 has no minus sign, so text like a PercentFormatter's
+                # tick labels takes it from STIX, and scalar tick labels use
+                # mathtext's
+                "font.family": ["cmr10", "STIXGeneral"],
                 "mathtext.fontset": "cm",
-                # cmr10 has no minus sign, so tick labels use mathtext's
                 "axes.formatter.use_mathtext": True,
                 # Embed TrueType rather than Type 3 fonts, which some
                 # journals reject
